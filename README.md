@@ -1,7 +1,7 @@
 # Flatpak ViaCEP
 
 
-> Dependencias: FLATPAK
+> Dependencias: flatpak, flatpak-builder, org.freedesktop.Platform//21.08 org.freedesktop.Sdk//21.08
 
 
 ## 🚀 Executando Flatpak ViaCEP
@@ -9,7 +9,7 @@
 ```
 flatpak-builder flatpak-builder build-dir org.flatpak.Catalogo.yml
 flatpak-builder --user --install build-dir org.flatpak.Catalogo.yml --force-clean
-flatpak run --socket=fallback-x11 --env=DISPLAY=':0' --share=network org.flatpak.catalogo
+flatpak run org.flatpak.catalogo
 
 ```
 
