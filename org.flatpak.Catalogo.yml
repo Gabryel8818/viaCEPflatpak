@@ -1,7 +1,7 @@
 app-id: org.flatpak.catalogo
-runtime: org.gnome.Platform
-runtime-version: '3.38'
-sdk: org.gnome.Sdk
+runtime: org.freedesktop.Platform
+runtime-version: '21.08'
+sdk: org.freedesktop.Sdk
 command: catalogo.sh
 modules:
   - name: catalogo
@@ -11,3 +11,7 @@ modules:
     sources:
       - type: file
         path: catalogo.sh
+finish-args:
+  - --socket=fallback-x11
+  - --env=DISPLAY=':0'
+  - --share=network
