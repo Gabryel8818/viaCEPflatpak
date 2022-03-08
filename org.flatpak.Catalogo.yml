@@ -8,9 +8,12 @@ modules:
     buildsystem: simple
     build-commands:
       - install -D catalogo.sh /app/bin/catalogo.sh
+      - install -D vars.sh /app/bin/functions/vars.sh
     sources:
       - type: file
         path: catalogo.sh
+      - type: dir
+        path: functions
 finish-args:
   - --socket=fallback-x11
   - --env=DISPLAY=':0'
